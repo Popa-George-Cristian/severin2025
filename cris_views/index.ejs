@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THX Entertainment</title>
+    <style>
+        /* Resetare stiluri de bază */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        /* Sidebar - Meniul */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 300px; /* Lățimea meniului, ca în pagina despre */
+            background-color: #f5f1e4;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h1 {
+            font-size: 32px;
+            color: #5c3c15;
+        }
+
+        .sidebar h2 {
+            font-size: 22px;
+            color: #5c3c15;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar nav ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar nav ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #5c3c15;
+            font-weight: bold;
+        }
+
+        .sidebar nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main content */
+        .content {
+            margin-left: 300px; /* Meniul are 300px lățime, deci margin-left trebuie să fie tot 300px */
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: #f4f4f4;
+            flex: 1;
+        }
+
+        /* Fundal imagine */
+        .content {
+            flex: 1;
+            width: 100%;
+            height: 100vh;
+            background: url('/ticket-bg.jpeg') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay h1 {
+            font-size: 36px;
+        }
+
+        .line-style {
+            width: 25%;
+            height: 3px;
+            background-color: #c07830;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        .overlay p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar - Meniul -->
+        <aside class="sidebar">
+            <h1>THX</h1>
+            <h2>Entertainment</h2>
+            <nav>
+                <ul>
+                    <li><a href="/" class="active">Acasă</a></li>
+                    <li><a href="/despre">Despre</a></li>
+                    <li><a href="/servicii">Servicii</a></li>
+                    <li><a href="/marturii">Mărturii</a></li>
+                    <li><a href="/echipa">Echipă</a></li> <!-- Secțiune Echipă -->
+                    <li><a href="/faq">FAQ</a></li> <!-- Secțiune FAQ -->
+                    <li><a href="/inregistrare">Înregistrare</a></li>
+                    <li><a href="/logare">Logare</a></li>
+                    <li><a href="/contact">Contact</a></li> <!-- Secțiune Contact adăugată înapoi -->
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <div class="content">
+            <div class="overlay">
+                <h1>Bilete Online</h1>
+                <div class="line-style"></div>
+                <p>Evenimente memorabile la un click distanță</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

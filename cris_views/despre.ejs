@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despre - THX Entertainment</title>
+    <style>
+        /* Resetare stiluri de bază */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        /* Sidebar - Meniul */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 300px; /* Lărgim meniul la 300px */
+            background-color: #f5f1e4;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h1 {
+            font-size: 32px;
+            color: #5c3c15;
+        }
+
+        .sidebar h2 {
+            font-size: 22px;
+            color: #5c3c15;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar nav ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar nav ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #5c3c15;
+            font-weight: bold;
+        }
+
+        .sidebar nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content */
+        .content {
+            margin-left: 300px; /* Mărim marginea la 300px pentru a se potrivi cu meniul */
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: #f4f4f4;
+            flex: 1;
+        }
+
+        /* Video container */
+        .video-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container video {
+            width: 55%; /* Micșorăm video-ul pentru a-l face să se încadreze corect */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container .text {
+            margin-left: 30px;
+            max-width: 600px;
+        }
+
+        .video-container .text h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .video-container .text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar - Meniul -->
+        <aside class="sidebar">
+            <h1>THX</h1>
+            <h2>Entertainment</h2>
+            <nav>
+                <ul>
+                    <li><a href="/" class="active">Acasă</a></li>
+                    <li><a href="/despre">Despre</a></li>
+                    <li><a href="/servicii">Servicii</a></li>
+                    <li><a href="/marturii">Mărturii</a></li>
+                    <li><a href="/echipa">Echipă</a></li> <!-- Secțiune Echipă -->
+                    <li><a href="/faq">FAQ</a></li> <!-- Secțiune FAQ -->
+                    <li><a href="/inregistrare">Înregistrare</a></li>
+                    <li><a href="/logare">Logare</a></li>
+                    <li><a href="/contact">Contact</a></li> <!-- Secțiune Contact -->
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <div class="content">
+            <div class="video-container">
+                <!-- Video -->
+                <video src="/chitara.mp4" controls></video>
+                <!-- Text description -->
+                <div class="text">
+                    <h2>Despre THX Entertainment</h2>
+                    <p>THX Entertainment offers premier multimedia services with expertise in sound and video production. We provide top-quality entertainment solutions tailored for every event, ensuring an immersive experience for all audiences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

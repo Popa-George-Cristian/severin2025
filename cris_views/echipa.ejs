@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echipă - THX Entertainment</title>
+    <style>
+        /* Resetare stiluri de bază */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Sidebar (meniul) */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 300px;
+            background-color: #f5f1e4; /* Culoare similară meniului */
+            padding: 40px;
+            text-align: center;
+            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h1 {
+            font-size: 32px;
+            color: #5c3c15;
+        }
+
+        .sidebar h2 {
+            font-size: 22px;
+            color: #5c3c15;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar nav ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar nav ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #5c3c15;
+            font-weight: bold;
+        }
+
+        .sidebar nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Pagina Echipă */
+        #main-content {
+            margin-left: 300px;
+            width: calc(100% - 300px);
+            padding: 20px;
+            background-color: #f0e4c7; /* Fundal similar cu meniul, dar ușor mai deschis */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            color: #333;
+            position: relative;
+        }
+
+        /* Titlul Echipă */
+        #main-content h1 {
+            font-size: 2.5rem;
+            color: #5c3c15;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .team-member {
+            background-color: #5c3c15; /* Culoare patratelelor (aceeași ca meniul) */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            overflow: hidden; /* Prevenim ca imagini să iasă din patrat */
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 300px; /* Maximăm lățimea patratului pentru a se potrivi mai bine */
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Poza în patratel */
+        .team-member img {
+            width: 100%; /* Fă poza să ocupe întreaga lățime a patratului */
+            height: 180px; /* Setați o înălțime fixă pentru imagini */
+            object-fit: cover; /* Acest lucru face ca imaginea să se umple complet fără a se distorsiona */
+            border-radius: 8px;
+        }
+
+        .team-member p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar (meniul) -->
+        <aside class="sidebar">
+            <h1>THX</h1>
+            <h2>Entertainment</h2>
+            <nav>
+                <ul>
+                    <li><a href="/">Acasă</a></li>
+                    <li><a href="/despre">Despre</a></li>
+                    <li><a href="/servicii">Servicii</a></li>
+                    <li><a href="/marturii">Mărturii</a></li>
+                    <li><a href="/echipa" class="active">Echipă</a></li> <!-- Secțiune Echipă -->
+                    <li><a href="/faq">FAQ</a></li> <!-- Secțiune FAQ -->
+                    <li><a href="/inregistrare">Înregistrare</a></li>
+                    <li><a href="/logare">Logare</a></li>
+                    <li><a href="/contact">Contact</a></li> <!-- Secțiune Contact -->
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Pagina Echipă -->
+        <div id="main-content">
+            <h1>Echipa Noastră</h1>
+            <div class="team-container">
+                <!-- Membrii echipei -->
+                <!-- Gabi -->
+                <div class="team-member">
+                    <img src="/gabi.jpeg" alt="Gabi">
+                    <p><strong>Gabi</strong><br>Expert în prezentări și logistică, Gabi asigură organizarea eficientă a evenimentelor și coordonarea echipei in plus este responsabil pentru design-ul site-ului.</p>
+                </div>
+
+                <!-- Cristi -->
+                <div class="team-member">
+                    <img src="/cristi.jpeg" alt="Cristi">
+                    <p><strong>Cristi</strong><br>Responsabil cu backend-ul și contribuții la frontend. Cristi se asigură că aplicațiile sunt stabile și funcționale.</p>
+                </div>
+
+                <!-- Florin -->
+                <div class="team-member">
+                    <img src="/florin.jpeg" alt="Florin">
+                    <p><strong>Florin</strong><br>Se ocupă de problemele greu de rezolvat și ajută la dezvoltarea funcționalităților de login și înregistrare. De asemenea, este un sprijin moral pentru Cristi cu glume și susținere.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
