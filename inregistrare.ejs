@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Înregistrare</title>
+    <link rel="stylesheet" href="/inregistrare.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-container input[type="password"] {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        .form-container .user-type-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .form-container label {
+            font-size: 14px;
+        }
+
+        .form-container p {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .form-container p a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .form-container p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Înregistrare</h2>
+        <form action="/inregistrare" method="POST">
+            <input type="text" name="username" placeholder="Nume utilizator" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Parolă" required>
+
+            <!-- Secțiunea pentru alegerea tipului de utilizator -->
+            <div class="user-type-container">
+                <div>
+                    <input type="radio" id="user" name="organizer" value="0" checked>
+                    <label for="user">Utilizator</label>
+                </div>
+                <div>
+                    <input type="radio" id="organizer" name="organizer" value="1">
+                    <label for="organizer">Organizator</label>
+                </div>
+            </div>
+
+            <button type="submit">Înregistrează-te</button>
+        </form>
+        <p>Ai deja cont? <a href="/logare">Autentificare</a></p>
+    </div>
+
+</body>
+</html>
+
